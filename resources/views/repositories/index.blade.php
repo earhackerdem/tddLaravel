@@ -22,15 +22,20 @@
                                 <td class="border px-4 py-2">{{ $repository->id }}</td>
                                 <td class="border px-4 py-2">{{ $repository->url }}</td>
                                 <td class="px-4 py-2">
-                                    <a href="{{ route('repositories.show',$repository) }}">
-                                    Ver
+                                    <a href="{{ route('repositories.show', $repository) }}">
+                                        Ver
+                                    </a>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <a href="{{ route('repositories.edit', $repository) }}">
+                                        Editar
                                     </a>
                                 </td>
                             </tr>
                         @empty
-                        <tr>
-                            <td colspan="3">No hay repositorios creados</td>
-                        </tr>
+                            <tr>
+                                <td colspan="4">No hay repositorios creados</td>
+                            </tr>
                         @endforelse
                     </tbody>
                 </table>
